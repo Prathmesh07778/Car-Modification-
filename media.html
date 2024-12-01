@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Modify Company</title>
+    <style>
+        body {
+            margin: 0; /* Adjusted margin */
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-x: hidden; /* Added overflow-x to hide horizontal scrollbar */
+        }
+        
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 80%;
+            width: 100%;
+            z-index: 1000;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 140px;
+            margin-right: 20px;
+        }
+
+        .navigation {
+            margin-right: 40px;
+        }
+
+        .navigation ul {
+            list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navigation ul li a {
+            text-decoration:none;
+            color: #f9f7f7;
+            font-style:italic;
+            font-size: 19px;
+            font-weight:bolder;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: rgb(219, 52, 52);
+            bottom: -2px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Additional styles for image gallery */
+        .image-gallery {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .column {
+            width: 30%;
+            padding: 5px;
+        }
+
+        .column img {
+            width: 100%;
+            cursor:pointer;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .footer {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            color: white;
+            padding: 20px 0; /* Add padding to top and bottom */
+        }
+        
+        .container {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Space items horizontally */
+        }
+        
+        .logo-footer img {
+           margin-top: 20px;
+        }
+        
+        
+        .social-icons {
+            display: inline-flex; /* Make the social icons flex */
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px; /* Set width and height for circular shape */
+            height: 40px;
+            border-radius: 50%; /* Make circular */
+            overflow: hidden; /* Hide overflow */
+            margin: 0 10px; /* Add margin between icons */
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+        
+        .social-icons img {
+            width: 100%; /* Ensure image fills the circular shape */
+            height: auto;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="romove.png" alt="Company Logo">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ppf.html">DRAGON-PPF</a></li>
+                <li><a href="modification.html">Modification</a></li>
+                <li><a href="BODY.html">BODY-SHOP</a></li>
+                <li><a href="media.html"><strong>MEDIA</strong></a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image-gallery">
+            <!-- Existing images -->
+            <div class="column">
+                <img src="fortuner.webp" alt="Image 1" onclick="openModal('fortuner2.webp')">
+            </div>
+            <div class="column">
+                <img src="innova-ppf1.webp" alt="Image 2" onclick="openModal('innova-ppf2.webp')">
+            </div>
+            <div class="column">
+                <img src="hun1.webp" alt="Image 3" onclick="openModal('hun2.webp')">
+            </div>
+            <div class="column">
+                <img src="m340i1.webp" alt="Image 4" onclick="openModal('m340i.webp')">
+            </div>
+            <div class="column">
+                <img src="scorpio-ppf2.webp" alt="Image 5" onclick="openModal('scorpio-ppf.webp')">
+            </div>
+            <div class="column">
+                <img src="nexon.webp" alt="Image 6" onclick="openModal('nexon1.webp')">
+            </div>
+        
+            
+            <div class="column">
+                <img src="denting (2).webp" alt="Image 7" onclick="openModal('denting2.webp')">
+            </div>
+            <div class="column">
+                <img src="painting1.webp" alt="Image 8" onclick="openModal('painting.webp')">
+            </div>
+            <div class="column">
+                <img src="wrap.webp" alt="Image 9" onclick="openModal('wrap2.webp')">
+            </div>
+            <div class="column">
+                <img src="cleaning1.webp" alt="Image 10" onclick="openModal('cleaning.webp')">
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <footer>
+        <div class="container">
+            <div class="logo-footer">
+                <img src="romove.png" alt="Company Logo">
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="facebook logo.avif" alt="Facebook"></a>
+                <a href="#"><img src="inst logo.avif" alt="Instagram"></a>
+                <a href="#"><img src="twitter.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+        function openModal(imgSrc) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+
+        
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

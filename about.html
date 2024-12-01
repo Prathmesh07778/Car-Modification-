@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Modify Company</title>
+    <style>
+        body {
+            margin: -5%; /* Add space to the body */
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 80%; /* Adjust max-width as needed */
+            width: 100%;
+            z-index: 1000;
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .logo {
+            width: 140px;
+            margin-right: 20px; /* Add some space between logo and navigation */
+        }
+
+        .navigation {
+            margin-right: 40px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navigation ul li {
+            margin-right: 20px;
+        }
+
+        .navigation ul li a {
+            text-decoration: none;
+            color: #f9f7f7;
+            font-style: italic;
+            font-size: 19px;
+            font-weight: bolder;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: rgb(219, 52, 52);
+            bottom: -2px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a:hover::after {
+            width: 100%;
+        }
+
+        .information {
+            max-width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Add underline after information */
+        .underline {
+            border-bottom: 2px solid white;
+            margin: 40px auto;
+            max-width: 80%;
+        }
+
+        /* Style for image grid */
+        .image-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        }
+
+        /* Style for image */
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+
+        /* Add hover effect */
+        .image-grid img:hover {
+            transform: scale(1.1); /* Increase scale on hover */
+        }
+
+
+        /* Style for image information box */
+        .image-info {
+            position: relative;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Position the image information box */
+        .image-info::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent;
+        }
+        .footer {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            color: white;
+            padding: 20px 0; /* Add padding to top and bottom */
+        }
+        
+        .container {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Space items horizontally */
+        }
+        
+        .logo-footer img {
+           margin-top: 20px;
+        }
+        
+        
+        .social-icons {
+            display: inline-flex; /* Make the social icons flex */
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px; /* Set width and height for circular shape */
+            height: 40px;
+            border-radius: 50%; /* Make circular */
+            overflow: hidden; /* Hide overflow */
+            margin: 0 10px; /* Add margin between icons */
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+        
+        .social-icons img {
+            width: 100%; /* Ensure image fills the circular shape */
+            height: auto;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="romove.png" alt="Company Logo">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ppf.html">DRAGON-PPF</a></li>
+                <li><a href="modification.html">Modification</a></li>
+                <li><a href="BODY.html">BODY-SHP</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="information">
+        <p><strong>Get Ready To Transform Your Ride</strong></p>
+        <p>Being a leader in automotive detailing, Supreme-Shift offers the highest quality shine and nano ceramic coating for vehicles of all segments. If infusing life into an old vehicle or making a new one shine brighter is something you are interested in, you’ve landed at just the perfect place.</p>
+        <p>Supreme-Shift is a globally recognized auto detailing company with its headquarters in Singapore. With industry leading standards, Supreme-Shift specializes in vehicle restoration & paint protection services by making use of the frontline nano tech coatings developed and tested in the US.</p>
+        <p>Premium services, great customer service, friendly employees and a perfectly detailed vehicle, that’s what you can expect when you visit any of our locations. Offering everything from the basic exterior wash to a complete detailed job inside and out, we have something for everyone. We understand our customers, and more specifically, the connection that our customers have with their vehicles, that is why we lay more emphasis on attaining our results with extreme care and consciousness, and that too keeping the originality intact through harmless nano-technology.</p>
+        <p>Our commitment to integrity, dynamic work environment, innovation, passion, creativity, eco-friendly measures, hard-work & dedication have made us the most trusted automobile vehicle detailers. It is because of our values and our results that we’ve been able to develop trust among the wide nexus of our clientele in India, Nepal, Philippines & Singapore. We take pride in the professional quality of our work which clearly reflects in our results and the confidence our customers put in us.</p>
+        <p>We deliver serious care and protection for all vehicles combined with excellent craftsmanship, cut-throat technology, top of the line coatings, eco-friendly measures and a dedicated team. That means doing so much more than just making a vehicle look good with effective, long-term perfection & protection solutions. Our wide nexus of clientele stretches from all across the nation to other neighboring countries.</p>
+        <p>Being a one-stop solution for all vehicle restoration and paint protection needs combined with excellent craftsmanship, cut-throat technology, eco-friendly measures and a dedicated team, Supreme-Shift has gradually become quite popular and one-of-a kind automotive detailing platform.</p>
+    </div>
+
+    <!-- Add underline after information -->
+    <div class="underline"></div>
+
+    <!-- Image Grid -->
+    <div class="image-grid">
+        <div class="image-info">
+            <img src="ppf.jpg" alt="Image 1">
+            <H3>CERAMIC-COATING</H3>
+            <P>Advanced coatings derived with nano-technology that help prevent environmental damages on your car’s precious paint. These coatings form a 9H or 10H hard crystallised layer on top of your vehicle’s clear coat and provide resistance against light scratches, chemical / acids and also protects the paint against harmful UV rays. You will also experience hydrophobic properties with the application of these coatings, which would avoid water markings to a great extent. These coatings are available with 3, 5 and 7 year application warranty plans.
+                Choose from a range of Body, Wheel, Glasses and Plastic trim coatings here at Brotomotiv.
+                Contact us by filling out the enquiry form and get your car ceramic coated today.</P>
+        </div>
+        <div class="image-info">
+            <img src="ppf2.jpg" alt="Image 2">
+            <H3>GRAPHENE-COATING</H3>
+            <P>Graphene coatings are ultra-hard and anti-static which when coated on a vehicle doesn't allow the dust and dirt to settle down. So in this post we are going to discuss its concept, advantages, and how it can revolutionize the automobile protective coating industry.</P>
+        </div>
+        <div class="image-info">
+            <img src="wrapcolors.jpg" alt="Image 3">
+            <H3>WRAP</H3>
+            <P>Vinyl wrapping brings a new custom look to your car, without tampering the OEM paint job. We provide wrapping services with almost 300+ colours and shades available with the best in league finish and application. It could be a simple sports stripe across the bonnet, a dual tone look for your new car or maybe a complete colour swap with a fascinating shade that your OEM supplier couldn’t offer, we are here to help. Our wrap jobs come with a 2 year application warranty.</P>
+        </div>
+        <div class="image-info">
+            <img src="coating.jpg" alt="Image 4">
+            <H3>BODY-SHOP</H3>
+            <P>We provide A-grade painting services across all types and categories of cars available in the market. It could be a panel of your new car, a complete outer body paint job for a decently aged vehicle, a custom colour paint job f your choice or maybe even a hardcore restoration of your old family’s car; we are here to help you out. Our experienced staff puts utmost attention in bringing out the best possible finish on your car’s paint. We diligently follow all required protocols and focus on delivering an exceptional experience that you probably might not have had at body-shop before. Our paint jobs come with a 2 year application warranty and if taken good care of, the paint can easily last you a decade.
+                Choose from a range of Body, Wheel, Glasses, Plastic trim coatings and Paint protection films after the Paint job, here at Brotomotiv. Full body paint jobs get discounts on detailing and paint protection services.</P>
+        </div>
+        <div class="image-info">
+            <img src="interior.jpg" alt="Image 5">
+            <H3>INTERIOR</H3>
+            <P>If your car is dull with swirl marks, full of hard water scales and pretty dusty after the last family trip, then a thorough car detailing service is what you should be looking for. We provide Ceramic and Graphene induced wax, Rubbing & Polishing, Premium washing, Vacuum cleaning and Deep interior cleaning services at our Detailing centre. As the name suggests, we focus on the details and bringing out the best possible look of your car in the most affordable and competitive prices possible.</P>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="logo-footer">
+                <img src="romove.png" alt="Company Logo">
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="facebook logo.avif" alt="Facebook"></a>
+                <a href="#"><img src="inst logo.avif" alt="Instagram"></a>
+                <a href="#"><img src="twitter.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

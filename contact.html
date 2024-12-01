@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Modify Company</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 80%;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .logo {
+            width: 140px;
+            margin-bottom: 20px;
+        }
+
+        .navigation {
+            margin-bottom: 20px;
+        }
+
+        .navigation ul {
+            list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navigation ul li a {
+            text-decoration:none;
+            color: #f9f7f7;
+            font-style:italic;
+            font-size: 19px;
+            font-weight:bolder;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: rgb(219, 52, 52);
+            bottom: -2px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .navigation ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .login-form {
+            background: url('pucut.jpg') no-repeat center center fixed;
+            background-size: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 40%; /* Adjust width as needed */
+            color: white;
+            margin-top: 20px; /* Adjust margin-top as needed */
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="email"],
+        .login-form select,
+        .login-form textarea,
+        .login-form input[type="submit"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .login-form input[type="text"]:focus,
+        .login-form input[type="email"]:focus,
+        .login-form select:focus,
+        .login-form textarea:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        .login-form input[type="submit"] {
+            background-color: #DB3434;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #C30000;
+        }
+        select{
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+
+        }
+        /* Style for dropdown options */
+        select option {
+            background-color: black;
+            color: white;
+        }
+        .footer {
+            color: #fff; /* Text color */
+            background-color: #333; /* Background color */
+            padding: 20px; /* Padding around the content */
+            height: 100px;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Add space between items */
+            align-items: center; /* Align items vertically */
+        }
+        
+        .footer div {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
+        }
+        
+        .footer img {
+            width: 30px; /* Adjust the width of the icons as needed */
+            margin-right: 10px; /* Add some spacing between the icon and text */
+        }
+        
+        .footer p {
+            margin: 5px 0; /* Add a small margin above and below the text */
+            font-size: 14px; /* Adjust font size */
+        }
+        
+        .footer p:first-child {
+            font-weight: bold; /* Make the first paragraph bold */
+        }
+    
+        .register-form {
+            background-color: #333; /* Background color */
+            padding: 20px; /* Padding around the content */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow */
+            color: white; /* Text color */
+            width: 400px; /* Maximum width of the form */
+            margin: 0 auto; /* Center the form horizontally */
+        }
+        
+        .register-form h2 {
+            text-align: center; /* Center the heading */
+        }
+        
+        .register-form input[type="text"],
+        .register-form textarea,
+        .register-form select {
+            width: calc(100% - 40px); /* Full width input fields, subtracting padding */
+            padding: 10px; /* Padding */
+            margin-bottom: 20px; /* Bottom margin */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: rgba(255, 255, 255, 0.2); /* Background color */
+            color: white; /* Text color */
+        }
+        
+        .register-form input[type="submit"] {
+            width: calc(100% - 40px); /* Full width submit button */
+            padding: 10px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #DB3434; /* Background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Cursor style */
+        }
+        
+        .register-form input[type="submit"]:hover {
+            background-color: #C30000; /* Darker background color on hover */
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="romove.png" alt="Company Logo">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ppf.html">DRAGON-PPF</a></li>
+                <li><a href="modification.html">Modification</a></li>
+                <li><a href="BODY.html">BODY-SHOP</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="login-container">
+            <div class="login-form" id="loginForm">
+                <h2>Login</h2>
+                <form onsubmit="return showRegistrationForm()">
+                    <input type="text" id="fullName" placeholder="Full Name" required><br>
+                    <input type="text" id="phoneNumber" placeholder="Phone Number (10 digits)" pattern="^\d{10}$" title="Please enter a valid 10-digit phone number" required><br>
+                    <input type="email" id="email" placeholder="Email" required><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="register-form" id="registrationForm" style="display: none;">
+                <h2>Car Details</h2>
+                <form onsubmit="return validateRegistrationForm()">
+                    <input type="text" id="name" placeholder="Name" required><br>
+                    <textarea id="address" placeholder="Address" required></textarea><br>
+                    <input type="text" id="phone" placeholder="Phone Number" required><br>
+                    <input type="text" id="alternatePhone" placeholder="Alternate Phone Number" required><br>
+                    <input type="text" id="chassisNumber" placeholder="Chassis Number" required><br>
+                    <select id="vehicleType" required>
+                        <option value="">Select Vehicle Type</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Truck">Truck</option>
+                        <!-- Add more options as needed -->
+                    </select><br>
+                    <input type="text" id="color" placeholder="Color" required><br>
+                    <select id="fuelType" required>
+                        <option value="">Select Fuel Type</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Electric">Electric</option>
+                        <!-- Add more options as needed -->
+                    </select><br>
+                    <select id="modificationType" required>
+                        <option value="">Select Modification Type</option>
+                        <option value="Body - work">Denting-Painting</option>
+                        <option value="Body-wrap">Wrap</option>
+                        <option value="ppf">PPF</option>
+                        <option value="Restoration">Restoration</option>
+                        <!-- Add more options as needed -->
+                    </select><br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <img src="address.png" alt="Address Icon">
+            <p>Address:Shop No 2 ,  Pawar Heights, Bus Depot, Pune Saswad Rd,<br> near Bhekrainagar, Bhekrai Nagar, Pune, Maharashtra 412308</p>
+        </div>
+        <div>
+            <img src="contact.png" alt="Contact Icon"><br>
+            <p>Contact Number:<br>Prathmesh:-  +91 9767909400<br> Chaitanya:-  +91 7397903959</p>
+        </div>
+        <div>
+            <img src="time.png" alt="Time Icon">
+            <p>Workshop Opening-Closing Time:<br> Monday - Sunday<br> 10 AM to 11 PM</p>
+        </div>
+        <div>
+            <img src="email.png" alt="Email Icon">
+            <p>Email: supremeshift@gmail.com</p>
+        </div>
+       
+    </div>
+    
+
+    
+    
+    
+    <script>
+        function showRegistrationForm() {
+            var fullName = document.getElementById("fullName").value.trim();
+            var phoneNumber = document.getElementById("phoneNumber").value.trim();
+            var email = document.getElementById("email").value.trim();
+        
+            // Regular expressions for validation
+            var nameRegex = /^[a-zA-Z\s]+$/; // Only letters and whitespace
+            var phoneRegex = /^\d{10}$/; // Exactly 10 digits
+        
+            // Full name validation
+            if (!nameRegex.test(fullName)) {
+                alert("Please enter a valid full name without numbers or symbols.");
+                return false;
+            }
+        
+            // Phone number validation
+            if (!phoneRegex.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+        
+            // Additional email validation can be added here if necessary
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registrationForm").style.display = "block";
+            return false;
+
+            
+            return true;
+        }
+        
+    
+        function validateRegistrationForm() {
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var phone = document.getElementById("phone").value;
+            var alternatePhone = document.getElementById("alternatePhone").value;
+            var chassisNumber = document.getElementById("chassisNumber").value;
+            var vehicleType = document.getElementById("vehicleType").value;
+            var color = document.getElementById("color").value;
+            var fuelType = document.getElementById("fuelType").value;
+            var modification = document.getElementById("modification").value;
+    
+            // Regular expressions for validation
+            var phoneRegex = /^\d{10}$/;
+            var chassisNumberRegex = /^[a-zA-Z0-9]+$/;
+    
+            // Validation checks
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+    
+            if (address.trim() === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+    
+            if (!phoneRegex.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+    
+            if (!phoneRegex.test(alternatePhone)) {
+                alert("Please enter a valid alternate phone number.");
+                return false;
+            }
+    
+            if (chassisNumber.trim() === "" || !chassisNumberRegex.test(chassisNumber)) {
+                alert("Please enter a valid chassis number.");
+                return false;
+            }
+    
+            if (vehicleType === "") {
+                alert("Please select your vehicle type.");
+                return false;
+            }
+    
+            if (color.trim() === "") {
+                alert("Please enter the color of your vehicle.");
+                return false;
+            }
+    
+            if (fuelType === "") {
+                alert("Please select the fuel type of your vehicle.");
+                return false;
+            }
+    
+    
+            return true;
+        }
+    </script>
+    
